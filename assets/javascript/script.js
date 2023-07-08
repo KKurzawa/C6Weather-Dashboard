@@ -1,80 +1,54 @@
-// var APIKey = "d92153470384d5553e1bce2444b7e763";
-// var city;
+var APIKey = "d92153470384d5553e1bce2444b7e763";
+var city;
 
-// var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + APIKey;
+var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + APIKey;
 
-// fetch(queryURL.data)
-// console.log(queryURL.data);
-var today = dayjs().format('dddd, MMMM D YYYY');
-$('#currentDay').text(today);
-var currentTime = dayjs().hour();
+fetch(queryURL.data)
 
-var searchBtn = document.querySelector('#btn');
-var searchInput = document.querySelector('#input');
+var searchInput = document.querySelector("#input");
+var searchForm = document.querySelector("#search-form");
+var searchList = document.querySelector("#searchList");
+var searchBtn = document.querySelector("#btn");
 var cities = [];
- 
-// for (var i = 1; i <= 10; i++) {
-//    key.push(i);
-// }
 
-function saveToLocalStorage(){
-    // for (var i = 1; i <= 10; i++) {
-    //     key.push(i);
-    //  }
-    
-    localStorage.setItem("Cities", JSON.stringify(searchInput.value));
-   
+var today = dayjs();
+$('#currentDay').text(today.format('MMM D, YYYY'));
+
+// Creates a list item for each City Submitted
+function renderCities() {
+  searchList.innerHTML = "";
+
+  for (var i = 0; i < cities.length; i++) {
+    var chosenCity = cities[i];
+
+    var li = document.createElement("li");
+    li.textContent = chosenCity;
+    li.setAttribute("data-index", i);
+    searchList.appendChild(li);
+  }
 }
 
-searchBtn.addEventListener('click', function (event){
-    event.preventDefault();
-    console.log(searchInput.value);
-    // for (let i = 0; searchInput.value; i++){
-    //     console.log([i]);
-    // }
-    var citiesText = searchInput.value.trim();
 
-    // if (citiesText === "") {
-    //     return;
-    //   }
-    cities.push(citiesText);
-    // searchInput.value = "";
-    saveToLocalStorage();
-    
+// Stores Cities to Local Storage
+function storeCities() {
+  localStorage.setItem("Cities", JSON.stringify(cities));
+}
+
+// Submits text input
+searchBtn.addEventListener("click", function(event) {
+  event.preventDefault();
+  var searchText = searchInput.value.trim();
+
+  if (searchText === "") {
+    return;
+  }
+
+  cities.push(searchText);
+  searchInput.value = "";
+
+  storeCities();
+  renderCities();
 });
-//everytime button is clicked index increases
-function test() {
-    console.log("Test");
-};
 
 
 
-// function storeTodos() {
-//     // Stringify and set key in localStorage to todos array
-//     localStorage.setItem("cities", JSON.stringify(searchInput.value));
-//   }
-  
-//   // Add submit event to form
-//   todoForm.addEventListener("submit", function(event) {
-//     event.preventDefault();
-  
-//     var todoText = todoInput.value.trim();
-  
-//     // Return from function early if submitted todoText is blank
-//     if (todoText === "") {
-//       return;
-//     }
-  
-//     // Add new todoText to todos array, clear the input
-//     todos.push(todoText);
-//     todoInput.value = "";
-  
-//     // Store updated todos in localStorage, re-render the list
-//     storeTodos();
-//     renderTodos();
-//   });
-
-
-for (let i = 0; searchInput.length; i++){
-
-}
