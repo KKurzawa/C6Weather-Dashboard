@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <script
+    src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
+    integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U="
+    crossorigin="anonymous">
+    </script>
+    <title>Weather Dashboard</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary d-flex justify-content-center p-3">
+        <h1 class="navbar-brand fs-1 text-white">Weather Dashboard</h1>
+    </nav> 
+    <div class="d-flex g-primary ps-3 pe-5 gy-4">
+        <div class="col-12 col-md-3 flex-column align-center bg-light p-5">
+          <h3 class="text-primary">Search For A City</h3>
+          <form id="search-form" class="form w-100">
+            <input id="input" class="form-input w-100" type="text" placeholder="Search!">
+            <button id="btn" type="button" class="btn btn-info btn-block w-100">Search</button>
+          </form>
+        </div>
+    
+        <div class="col-12 col-md-9 flex-column align-center bg-light p-5 mt-5 border border-dark">
+            <h2>Atlanta <span id="result-text"></span></h2>
+            <p id="currentDay"></p>
+            <h4>Temp: 76</h4>
+            <h4>Wind: 8MPH</h4>
+            <h4>Humidity: 20%</h4>
+            <div id="result-content"></div>
+        </div>
+    </div>
+
+    <div class="d-flex g-primary ps-3 pe-5 gy-4">
+        <div class="col-12 col-md-3 flex-column align-center bg-light p-5">
+          <h4 id="cityOne" class="text-primary">Detroit</h4>
+          <h4 id="cityTwo" class="text-primary">Houston</h4>
+          <h4 id="cityThree" class="text-primary">New York</h4>
+          <h4 id="cityFour" class="text-primary">Los Angelos</h4>
+          <h4 id="cityFive" class="text-primary">Chicago</h4>
+          <h4 id="citySix" class="text-primary">Des Moines</h4>
+        </div>
+        
+        <!-- <div class="col-12 col-md-1 flex-column align-center bg-light m-4 border border-dark text-center">
+            <h5>7/7/23 <span id="result-text"></span></h5>
+                <h6>Temp: 76</h6>
+                <h6>Wind: 8MPH</h6>
+                <h6>Humidity: 20%</h6>
+                <div id="result-content"></div>
+        </div>
+
+        <div class="col-12 col-md-1 flex-column align-center bg-light m-4 border border-dark text-center">
+            <h5>7/7/23 <span id="result-text"></span></h5>
+                <h6>Temp: 76</h6>
+                <h6>Wind: 8MPH</h6>
+                <h6>Humidity: 20%</h6>
+                <div id="result-content"></div>
+        </div>
+        <div class="col-12 col-md-1 flex-column align-center bg-light m-4 border border-dark text--center">
+            <h5>7/7/23 <span id="result-text"></span></h5>
+                <h6>Temp: 76</h6>
+                <h6>Wind: 8MPH</h6>
+                <h6>Humidity: 20%</h6>
+                <div id="result-content"></div>
+        </div>
+        <div class="col-12 col-md-1 flex-column align-center bg-light m-4 border border-dark text-center">
+            <h5>7/7/23 <span id="result-text"></span></h5>
+                <h6>Temp: 76</h6>
+                <h6>Wind: 8MPH</h6>
+                <h6>Humidity: 20%</h6>
+                <div id="result-content"></div>
+        </div>
+        <div class="col-12 col-md-1 flex-column align-center bg-light m-4 border border-dark text-center">
+            <h5>7/7/23 <span id="result-text"></span></h5>
+                <h6>Temp: 76</h6>
+                <h6>Wind: 8MPH</h6>
+                <h6>Humidity: 20%</h6>
+                <div id="result-content"></div>
+        </div> -->
+    </div>
+          
+
+    <script src="./assets/javascript/script.js"> </script>
+</body>
+</html>
