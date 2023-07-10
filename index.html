@@ -31,20 +31,21 @@
           </form>
         </div>
     
-        <div class="col-12 col-md-9 flex-column align-center bg-light p-5 mt-5 border border-dark">
-            <h2>Atlanta <span id="result-text"></span></h2>
-            <p id="currentDay"></p>
-            <h4>Temp: 76</h4>
-            <h4>Wind: 8MPH</h4>
-            <h4>Humidity: 20%</h4>
-            <div id="result-content"></div>
+        <div id = "today" class="col-12 col-md-9 flex-column align-center bg-light p-5 mt-5">
+            <h2>City: <span id="targetCity"> </span></h2>
+            <h3>Today:<span id="currentDay"></span></h3>
+            <h4>Temp: <span id="currentTemp"></span> °F</h4>
+            <h4>Wind: <span id="currentWind"></span> MPH</h4>
+            <h4>Humidity: <span id="currentHumidity"></span> %</h4>
         </div>
     </div>
 
     <div class="d-flex g-primary ps-3 pe-5 gy-4">
         
-        <ul id="searchList" class="col-12 col-md-3 flex-column align-center bg-light p-5">
-        </ul>
+        <div id="searchList" class="col-12 col-md-3 flex-column align-center bg-light p-5">
+        </div>
+
+    <div class="test" id="response-text"></div>    
         
         <!-- <div class="col-12 col-md-1 flex-column align-center bg-light m-4 border border-dark text-center">
             <h5>7/7/23 <span id="result-text"></span></h5>
