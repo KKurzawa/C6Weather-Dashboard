@@ -31,7 +31,7 @@
           </form>
         </div>
     
-        <div id = "today" class="col-12 col-md-9 flex-column align-center bg-light p-5 mt-5">
+        <div id = "today" class="col-12 col-md-9 flex-column align-center bg-light p-5 mt-4">
             <h2>City: <span id="targetCity"> </span></h2>
             <h3>Today:<span id="currentDay"></span></h3>
             <h4>Temp: <span id="currentTemp"></span> °F</h4>
@@ -40,51 +40,48 @@
         </div>
     </div>
 
-    <div class="d-flex g-primary ps-3 pe-5 gy-4">
+    <ul id="searchList" class="col-12 col-md-3 flex-column align-center bg-light p-5">
+    </ul>
+    
+    <div id="cards" class="d-flex ps-3 pe-5 gy-4">
         
-        <ul id="searchList" class="col-12 col-md-3 flex-column align-center bg-light p-5">
-        </ul>
-
-    <div class="test" id="response-text"></div>    
         
-        <!-- <div class="col-12 col-md-1 flex-column align-center bg-light m-4 border border-dark text-center">
-            <h5>7/7/23 <span id="result-text"></span></h5>
-                <h6>Temp: 76</h6>
-                <h6>Wind: 8MPH</h6>
-                <h6>Humidity: 20%</h6>
-                <div id="result-content"></div>
+
+        
+        <!-- <div id="cards" class="card col-12 col-md-1 flex-column align-center m-4 border border-dark text-center">
+            <h5 id="dateOne"></h5>
+                <h6>Temp: <span id="tempDateOne"></span> °F</h6>
+                <h6>Wind: <span id="windDateOne"></span> MPH</h6>
+                <h6>Humidity: <span id="humidityDateOne"></span> %</h6>
         </div>
 
-        <div class="col-12 col-md-1 flex-column align-center bg-light m-4 border border-dark text-center">
-            <h5>7/7/23 <span id="result-text"></span></h5>
-                <h6>Temp: 76</h6>
-                <h6>Wind: 8MPH</h6>
-                <h6>Humidity: 20%</h6>
-                <div id="result-content"></div>
+        <div id="cards" class="card col-12 col-md-1 flex-column align-center m-4 border border-dark text-center">
+            <h5 id="dateTwo"></h5>
+                <h6>Temp: <span id="tempDateTwo"></span> °F</h6>
+                <h6>Wind: <span id="windDateTwo"></span> MPH</h6>
+                <h6>Humidity: <span id="humidityDateTwo"></span> %</h6>
         </div>
-        <div class="col-12 col-md-1 flex-column align-center bg-light m-4 border border-dark text--center">
-            <h5>7/7/23 <span id="result-text"></span></h5>
-                <h6>Temp: 76</h6>
-                <h6>Wind: 8MPH</h6>
-                <h6>Humidity: 20%</h6>
-                <div id="result-content"></div>
+        <div id="cards" class="card col-12 col-md-1 flex-column align-center m-4 border border-dark text-center">
+            <h5 id="dateThree"></h5>
+                <h6>Temp: <span id="tempDateThree"></span> °F</h6>
+                <h6>Wind: <span id="windDateThree"></span> MPH</h6>
+                <h6>Humidity: <span id="humidityDateThree"></span> %</h6>
         </div>
-        <div class="col-12 col-md-1 flex-column align-center bg-light m-4 border border-dark text-center">
-            <h5>7/7/23 <span id="result-text"></span></h5>
-                <h6>Temp: 76</h6>
-                <h6>Wind: 8MPH</h6>
-                <h6>Humidity: 20%</h6>
-                <div id="result-content"></div>
+        <div id="cards" class="card col-12 col-md-1 flex-column align-center m-4 border border-dark text-center">
+            <h5 id="dateFour"></h5>
+                <h6>Temp: <span id="tempDateFour"></span> °F</h6>
+                <h6>Wind: <span id="windDateFour"></span> MPH</h6>
+                <h6>Humidity: <span id="humidityDateFour"></span> %</h6>
         </div>
-        <div class="col-12 col-md-1 flex-column align-center bg-light m-4 border border-dark text-center">
-            <h5>7/7/23 <span id="result-text"></span></h5>
-                <h6>Temp: 76</h6>
-                <h6>Wind: 8MPH</h6>
-                <h6>Humidity: 20%</h6>
-                <div id="result-content"></div>
+        <div id="cards" class="card col-12 col-md-1 flex-column align-center m-4 border border-dark text-center">
+            <h5 id="dateFive"></h5>
+                <h6>Temp: <span id="tempDateFive"></span> °F</h6>
+                <h6>Wind: <span id="windDateFive"></span> MPH</h6>
+                <h6>Humidity: <span id="humidityDateFive"></span> %</h6>
         </div> -->
     </div>
-          
+    <div id="forecast-container"></div>    
+
 
     <script src="./assets/javascript/script.js"> </script>
 </body>
