@@ -4,11 +4,10 @@ var wind = document.querySelector('#currentWind');
 var humidity = document.querySelector('#currentHumidity');
 var searchBtn = document.querySelector("#btn");
 var todayDisplay = document.querySelector("#today");
+var cities = []
 
 
 
-// var responseText = document.getElementById('response-text');
-// var targetCity = document.querySelector("#targetCity")
 function makeWeather(data){
   //this would be a good place to call saveToStraoge(newCitynamefrom)
   saveToStorage();
@@ -35,12 +34,20 @@ function getApi(queryURL, type) {
     });
 }
 
+function clearBox() {
+  var div = document.getElementById("cards");
+    
+  while(div.firstChild) {
+      div.removeChild(div.firstChild);
+  }
+}
+
 function makeForecast(data){
   console.log(data)
   var cardsContainer = document.getElementById("cards");
-  //here you must get rid of the old batch
+  clearBox();
+  
   for (let index = 0; index < data.list.length; index += 8) {
-    
     var card = makeForecastCard(data.list[index])
     cardsContainer.appendChild(card);
   }
@@ -52,7 +59,8 @@ function makeForecastCard(data){
   card.className = "card col-12 col-md-2 flex-column justify-content-center align-center ms-4 me-3 border border-dark text-center"
   var cardHeader = document.createElement("h5");
   var date = new Date(data.dt*1000)
-  cardHeader.innerHTML = dayjs(date).format('MMM D');
+  console.log(date.getDate());
+  cardHeader.innerHTML = dayjs.unix(data.dt).utc().format('MMM D');
   card.appendChild(cardHeader);
   var cardTemp = document.createElement("h6");
   cardTemp.innerHTML = "Temp: " + data.main.temp + " °F";
@@ -85,11 +93,6 @@ searchBtn.addEventListener("click", function(){
 
 
 function saveToStorage(){
-  //read our storage (JSON.parse("whaterver I use to read the storage"))
-  //------ IS THERE GOING TO BE STORAGE?
-  //IF THERE IS NO STROAGE
-  var cities = []
-  
   var newCity = document.querySelector("#input");
   var cityText = newCity.value;
 
@@ -98,10 +101,7 @@ function saveToStorage(){
     return;
   }
 
-  // Add new todoText to todos array, clear the input
   cities.push(cityText);
- 
-  
   console.log(newCity.value);
   localStorage.setItem("Cities", JSON.stringify(cities));
   return;
