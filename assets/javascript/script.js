@@ -9,7 +9,6 @@ var cities = []
 
 
 function makeWeather(data){
-  //this would be a good place to call saveToStraoge(newCitynamefrom)
   saveToStorage();
   temp = data.main.temp;
   wind = data.wind.speed;
@@ -88,6 +87,7 @@ searchBtn.addEventListener("click", function(){
   var forecastURL = "http://api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid=" + APIKey + "&units=imperial";
   getApi(forecastURL, "forecast")  
   
+  
 })
 
 
@@ -106,17 +106,24 @@ function saveToStorage(){
   localStorage.setItem("Cities", JSON.stringify(cities));
   return;
 
+
   // my storage is what dataType? Array
   // add an element to an array
   //if my array is too long now, maybe get rid of the oldest one
   // SAVE IT TO STORAGE AND STRIGNIFY THE ARRAY
 
 
-  //loadStorage()
+  
 }
 
 
 function loadStorage(){
+
+    // Clear todoList element and update todoCountSpan
+   
+  
+    // Render a new li for each todo
+
   //read our storage, parse it
   //if there is no stroage, so we return
   // Here we would empty the parent container
