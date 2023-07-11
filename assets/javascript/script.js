@@ -6,8 +6,6 @@ var searchBtn = document.querySelector("#btn");
 var todayDisplay = document.querySelector("#today");
 var cities = []
 
-
-
 function makeWeather(data){
   saveToStorage();
   temp = data.main.temp;
@@ -75,28 +73,10 @@ function makeForecastCard(data){
   }
   
 
-
-
-searchBtn.addEventListener("click", function(){
-  var city = document.querySelector("#input").value;
-  document.getElementById("targetCity").innerHTML=city;
-  var today = dayjs();
-  $('#currentDay').text(today.format('MMM D, YYYY'));
-  var weatherURL = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + APIKey + "&units=imperial";
-  getApi(weatherURL, "weather");
-  var forecastURL = "http://api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid=" + APIKey + "&units=imperial";
-  getApi(forecastURL, "forecast")  
-  
-  
-})
-
-
-
 function saveToStorage(){
   var newCity = document.querySelector("#input");
   var cityText = newCity.value;
 
-  // Return from function early if submitted todoText is blank
   if (cityText === "") {
     return;
   }
@@ -106,19 +86,40 @@ function saveToStorage(){
   localStorage.setItem("Cities", JSON.stringify(cities));
   return;
 
-
   // my storage is what dataType? Array
   // add an element to an array
   //if my array is too long now, maybe get rid of the oldest one
   // SAVE IT TO STORAGE AND STRIGNIFY THE ARRAY
-
-
-  
 }
 
 
 function loadStorage(){
+  var city = document.querySelector("#input").value;
+  var el = document.createElement('h4');
+  el.className = "element";
+  el.innerHTML = city;
+  document.getElementById('searchList').appendChild(el);
+  el.addEventListener('click', function(){
+    console.log(city);
+  var display = document.querySelector("#input");
+  display.innerHTML = city;  
+  })
+  // todoList.innerHTML = "";
+  // todoCountSpan.textContent = todos.length;
 
+  // // Render a new li for each todo
+  // for (var i = 0; i < todos.length; i++) {
+  //   var todo = todos[i];
+
+  //   var li = document.createElement("li");
+  //   li.textContent = todo;
+  //   li.setAttribute("data-index", i);
+
+  //   var button = document.createElement("button");
+  //   button.textContent = "Complete ✔️";
+
+  //   li.appendChild(button);
+  //   todoList.appendChild(li);
     // Clear todoList element and update todoCountSpan
    
   
@@ -134,6 +135,20 @@ function loadStorage(){
   // getApi(weatherURL, "weather");
   // var forecastURL = "http://api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid=" + APIKey + "&units=imperial";
   // getApi(forecastURL, "forecast")  
+// }
 }
+
+searchBtn.addEventListener("click", function(){
+  var city = document.querySelector("#input").value;
+  document.getElementById("targetCity").innerHTML=city;
+  var today = dayjs();
+  $('#currentDay').text(today.format('MMM D, YYYY'));
+  var weatherURL = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + APIKey + "&units=imperial";
+  getApi(weatherURL, "weather");
+  var forecastURL = "http://api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid=" + APIKey + "&units=imperial";
+  getApi(forecastURL, "forecast")  
+  loadStorage();
+  
+})
 
 
