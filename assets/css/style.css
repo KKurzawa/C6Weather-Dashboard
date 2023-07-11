@@ -5,4 +5,5 @@
 .element {
   background-color: rgb(184, 183, 183);
   text-align: center;
+  cursor: pointer;
 }

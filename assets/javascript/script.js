@@ -40,7 +40,7 @@ function clearBox() {
 }
 
 function makeForecast(data){
-  console.log(data)
+  // console.log(data)
   var cardsContainer = document.getElementById("cards");
   clearBox();
   
@@ -51,12 +51,12 @@ function makeForecast(data){
 }
 
 function makeForecastCard(data){
-  console.log(data)
+  // console.log(data)
   var card = document.createElement("div");
   card.className = "card col-12 col-md-2 flex-column justify-content-center align-center ms-4 me-3 border border-dark text-center"
   var cardHeader = document.createElement("h5");
   var date = new Date(data.dt*1000)
-  console.log(date.getDate());
+  // console.log(date.getDate());
   cardHeader.innerHTML = dayjs.unix(data.dt).utc().format('MMM D');
   card.appendChild(cardHeader);
   var cardTemp = document.createElement("h6");
@@ -82,7 +82,7 @@ function saveToStorage(){
   }
 
   cities.push(cityText);
-  console.log(newCity.value);
+  // console.log(newCity.value);
   localStorage.setItem("Cities", JSON.stringify(cities));
   return;
 
@@ -92,7 +92,12 @@ function saveToStorage(){
   // SAVE IT TO STORAGE AND STRIGNIFY THE ARRAY
 }
 
+// function textBox(){
+//   var display = document.querySelector("#test");
+//   display.innerHTML
+//   display.append(city);
 
+// }
 function loadStorage(){
   var city = document.querySelector("#input").value;
   var el = document.createElement('h4');
@@ -101,8 +106,7 @@ function loadStorage(){
   document.getElementById('searchList').appendChild(el);
   el.addEventListener('click', function(){
     console.log(city);
-  var display = document.querySelector("#input");
-  display.innerHTML = city;  
+  // textBox();  
   })
   // todoList.innerHTML = "";
   // todoCountSpan.textContent = todos.length;
