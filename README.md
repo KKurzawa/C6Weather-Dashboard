@@ -9,12 +9,12 @@ This project creates a weather dashboard that displays todays weather and the fo
 When the page is loaded we see a text box with a search button below. When the user enters a city in the text box and clicks the submit button, the selected city's current weather and 5 day forecast is displayed. The city name is displayed in a list with all other recent searches.
 
 Screenshots:
-![Top](https://github.com/KKurzawa/C5Work-Day-Scheduler/blob/main/assets/images/img1.png)
-![Bottom](https://github.com/KKurzawa/C5Work-Day-Scheduler/blob/main/assets/images/img2.png)
+![img1](https://github.com/KKurzawa/C6Weather-Dashboard/blob/main/assets/images/img1.png)
+![Bottom](https://github.com/KKurzawa/C6Weather-Dashboard/blob/main/assets/images/img2.png)
 
-Website URL: https://kkurzawa.github.io/C5Work-Day-Scheduler/
+Website URL:
 
-GitHub Repository: https://github.com/KKurzawa/C5Work-Day-Scheduler
+GitHub Repository: https://github.com/KKurzawa/C6Weather-Dashboard
 
 ## CREDITS
 
