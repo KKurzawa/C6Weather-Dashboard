@@ -105,8 +105,13 @@ function loadStorage(){
   el.innerHTML = city;
   document.getElementById('searchList').appendChild(el);
   el.addEventListener('click', function(){
-    console.log(city);
-  // textBox();  
+  console.log(city);
+  document.getElementById("targetCity").innerHTML=city;
+  var weatherURL = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + APIKey + "&units=imperial";
+  getApi(weatherURL, "weather");
+  var forecastURL = "http://api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid=" + APIKey + "&units=imperial";
+  getApi(forecastURL, "forecast")
+  clearText();
   })
   // todoList.innerHTML = "";
   // todoCountSpan.textContent = todos.length;
@@ -141,7 +146,11 @@ function loadStorage(){
   // getApi(forecastURL, "forecast")  
 // }
 }
-
+function clearText(){
+  var clearCity = document.querySelector("#input");
+  clearCity.value = "";
+  console.log("poop");
+}
 searchBtn.addEventListener("click", function(){
   var city = document.querySelector("#input").value;
   document.getElementById("targetCity").innerHTML=city;
@@ -152,6 +161,7 @@ searchBtn.addEventListener("click", function(){
   var forecastURL = "http://api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid=" + APIKey + "&units=imperial";
   getApi(forecastURL, "forecast")  
   loadStorage();
+  clearText();
   
 })
 

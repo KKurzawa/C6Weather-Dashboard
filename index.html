@@ -25,9 +25,9 @@
         <h1 class="navbar-brand fs-1 text-white">Weather Dashboard</h1>
     </nav> 
     <div class="d-flex g-primary ps-3 pe-5 gy-4">
-        <div class="col-12 col-md-3 flex-column align-center bg-light p-5">
-          <h3 class="text-primary">Search For A City</h3>
-          <form id="search-form" class="form w-100">
+        <div class="col-12 col-md-3 flex-column align-center bg-light">
+          <h3 class="text-primary text-align-center pt-5 ps-2">Search For A City</h3>
+          <form id="search-form" class="form w-100 pt-1 pe-5 ps-2">
             <input id="input" class="form-input w-100" type="text" placeholder="Search!">
             <button id="btn" type="button" class="btn btn-info btn-block w-100">Search</button>
           </form>
@@ -41,51 +41,12 @@
             <h4>Humidity: <span id="currentHumidity"></span> %</h4>
         </div>
     </div>
-
-    <div id="searchList" class="col-12 col-md-3 flex-column align-center bg-light p-5">
-    </div>
-    <div><span id="test"></span></div>
+    <h3 id="cardsHeader" class="text-primary ms-6">5 Day Forecast</h3>
     <div id="cards" class="d-flex ps-3 pe-5 gy-4">
-    
-        
-        
-
-        
-        <!-- <div id="cards" class="card col-12 col-md-1 flex-column align-center m-4 border border-dark text-center">
-            <h5 id="dateOne"></h5>
-                <h6>Temp: <span id="tempDateOne"></span> °F</h6>
-                <h6>Wind: <span id="windDateOne"></span> MPH</h6>
-                <h6>Humidity: <span id="humidityDateOne"></span> %</h6>
-        </div>
-
-        <div id="cards" class="card col-12 col-md-1 flex-column align-center m-4 border border-dark text-center">
-            <h5 id="dateTwo"></h5>
-                <h6>Temp: <span id="tempDateTwo"></span> °F</h6>
-                <h6>Wind: <span id="windDateTwo"></span> MPH</h6>
-                <h6>Humidity: <span id="humidityDateTwo"></span> %</h6>
-        </div>
-        <div id="cards" class="card col-12 col-md-1 flex-column align-center m-4 border border-dark text-center">
-            <h5 id="dateThree"></h5>
-                <h6>Temp: <span id="tempDateThree"></span> °F</h6>
-                <h6>Wind: <span id="windDateThree"></span> MPH</h6>
-                <h6>Humidity: <span id="humidityDateThree"></span> %</h6>
-        </div>
-        <div id="cards" class="card col-12 col-md-1 flex-column align-center m-4 border border-dark text-center">
-            <h5 id="dateFour"></h5>
-                <h6>Temp: <span id="tempDateFour"></span> °F</h6>
-                <h6>Wind: <span id="windDateFour"></span> MPH</h6>
-                <h6>Humidity: <span id="humidityDateFour"></span> %</h6>
-        </div>
-        <div id="cards" class="card col-12 col-md-1 flex-column align-center m-4 border border-dark text-center">
-            <h5 id="dateFive"></h5>
-                <h6>Temp: <span id="tempDateFive"></span> °F</h6>
-                <h6>Wind: <span id="windDateFive"></span> MPH</h6>
-                <h6>Humidity: <span id="humidityDateFive"></span> %</h6>
-        </div> -->
     </div>
-    <div id="forecast-container"></div>    
-
-
+    <div id="searchList" class="col-12 col-md-12 m-4 flex-column align-center bg-light p-5">
+    </div>
+      
     <script src="./assets/javascript/script.js"> </script>
 </body>
 </html>
