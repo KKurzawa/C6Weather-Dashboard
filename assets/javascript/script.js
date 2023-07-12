@@ -107,9 +107,9 @@ function loadStorage(){
   el.addEventListener('click', function(){
   console.log(city);
   document.getElementById("targetCity").innerHTML=city;
-  var weatherURL = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + APIKey + "&units=imperial";
+  var weatherURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + APIKey + "&units=imperial";
   getApi(weatherURL, "weather");
-  var forecastURL = "http://api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid=" + APIKey + "&units=imperial";
+  var forecastURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid=" + APIKey + "&units=imperial";
   getApi(forecastURL, "forecast")
   clearText();
   })
@@ -155,11 +155,12 @@ searchBtn.addEventListener("click", function(){
   document.getElementById("targetCity").innerHTML=city;
   var today = dayjs();
   $('#currentDay').text(today.format('MMM D, YYYY'));
-  var weatherURL = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + APIKey + "&units=imperial";
+  var weatherURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + APIKey + "&units=imperial";
   getApi(weatherURL, "weather");
-  var forecastURL = "http://api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid=" + APIKey + "&units=imperial";
+  var forecastURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid=" + APIKey + "&units=imperial";
   getApi(forecastURL, "forecast")  
   loadStorage();
+  saveToStorage();
   clearText();
   todayDisplay.style.display = "block";
   var cardsHeader = document.querySelector("#cardsHeader");
