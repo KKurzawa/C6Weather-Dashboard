@@ -10,7 +10,7 @@ When the page is loaded we see a text box with a search button below. When the u
 
 Screenshots:
 ![img1](https://github.com/KKurzawa/C6Weather-Dashboard/blob/main/assets/images/img1.png)
-![Bottom](https://github.com/KKurzawa/C6Weather-Dashboard/blob/main/assets/images/img2.png)
+![img2](https://github.com/KKurzawa/C6Weather-Dashboard/blob/main/assets/images/img2.png)
 
 Website URL: https://kkurzawa.github.io/C6Weather-Dashboard/
 
