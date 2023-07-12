@@ -165,6 +165,8 @@ searchBtn.addEventListener("click", function(){
   todayDisplay.style.display = "block";
   var cardsHeader = document.querySelector("#cardsHeader");
   cardsHeader.style.display = "block";
+  var searchHeader = document.querySelector("#searchHeader");
+  searchHeader.style.display = "block";
   
 })
 

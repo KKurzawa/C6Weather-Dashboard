@@ -25,3 +25,12 @@
   margin: 16px 20px 0 45px;
   display: none;
 }
+
+#searchHeader {
+  margin: 16px 20px 0 45px;
+  display: none;
+}
+
+.element {
+  border: 2px solid black;
+}
