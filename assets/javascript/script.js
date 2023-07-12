@@ -149,7 +149,6 @@ function loadStorage(){
 function clearText(){
   var clearCity = document.querySelector("#input");
   clearCity.value = "";
-  console.log("poop");
 }
 searchBtn.addEventListener("click", function(){
   var city = document.querySelector("#input").value;
