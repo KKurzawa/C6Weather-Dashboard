@@ -1,5 +1,6 @@
 #today {
   border: 2px solid black;
+  display: none;
 }
 
 .element {
@@ -13,7 +14,7 @@
 }
 
 #cards {
-  margin: 30px 20px 0px 20px;
+  margin: 15px 20px 0px 20px;
 }
 
 .card {
@@ -21,4 +22,6 @@
 }
 
 #cardsHeader {
+  margin: 16px 20px 0 45px;
+  display: none;
 }

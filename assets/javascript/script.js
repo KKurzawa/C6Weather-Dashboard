@@ -162,6 +162,9 @@ searchBtn.addEventListener("click", function(){
   getApi(forecastURL, "forecast")  
   loadStorage();
   clearText();
+  todayDisplay.style.display = "block";
+  var cardsHeader = document.querySelector("#cardsHeader");
+  cardsHeader.style.display = "block";
   
 })
 
