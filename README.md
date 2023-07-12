@@ -6,7 +6,7 @@ This project creates a weather dashboard that displays todays weather and the fo
 
 ## Usage
 
-When the page is loaded we see a text box with a search button below. When the user enters a city in the text box and clicks the submit button, the selected city's current weather and 5 day forecast is displayed. The city name is displayed in a list with all other recent searches.
+When the page is loaded we see a text box with a search button below. When the user enters a city in the text box and clicks the submit button, the selected city's current weather and 5 day forecast is displayed. The city name is displayed in a list with all other recent searches. When the city in the displayed list is clicked, it's current weather and 5 day forecast are displayed.
 
 Screenshots:
 ![img1](https://github.com/KKurzawa/C6Weather-Dashboard/blob/main/assets/images/img1.png)
