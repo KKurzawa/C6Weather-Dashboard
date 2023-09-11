@@ -1,6 +1,6 @@
-# C6 Weather Dashbord
+# Weather Dashbord
 
-## Challenge 6 in MSU Bootcamp
+## Description
 
 This project creates a weather dashboard that displays todays weather and the forecast for the next five days of the submitted city. This is an important tool for anyone planning to travel. Building this project helped tighten up my JavaScript skills and introduced me to the use of bootstrap and server side api's.
 
