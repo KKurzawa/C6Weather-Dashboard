@@ -12,7 +12,7 @@ Screenshots:
 ![img1](https://github.com/KKurzawa/C6Weather-Dashboard/blob/main/assets/images/img1.png)
 ![img2](https://github.com/KKurzawa/C6Weather-Dashboard/blob/main/assets/images/img2.png)
 
-Website URL: https://kkurzawa.github.io/C6Weather-Dashboard/
+Website URL: https://kkurzawa.github.io/Weather-Dashboard/
 
 GitHub Repository: https://github.com/KKurzawa/C6Weather-Dashboard
 
